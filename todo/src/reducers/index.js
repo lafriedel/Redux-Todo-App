@@ -1,7 +1,18 @@
 import { ADD_TO_DO } from '../actions';
 
 const initialState = {
-    todos: []
+    todos: [
+        {
+            task: "Create To-Do app",
+            id: 1528817077286,
+            completed: false
+        },
+        {
+            task: "Celebrate my birthday",
+            id: 1528817084358,
+            completed: false
+        }
+    ]
 }
 
 export default (state = initialState, action) => {

@@ -3,7 +3,7 @@ import React from 'react';
 const ToDo = props => {
     return (
         <div>
-            <p>To do!</p>
+            <p>{props.todo.task}</p>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { ADD_TO_DO } from '../actions';
+import { ADD_TO_DO, TOGGLE_COMPLETED } from '../actions';
 
 const initialState = {
     todos: [
@@ -23,6 +23,16 @@ export default (state = initialState, action) => {
         return {
             ...state, 
             todos: [...state.todos, action.payload]
+        };
+        case TOGGLE_COMPLETED:
+        console.log(action.payload);
+        return {
+            ...state,
+            todos: state.todos.map(todo => 
+                (todo.id === action.payload)
+                ? {...todo, completed: !todo.completed} 
+                : todo
+            )
         }
         default:
         return state;

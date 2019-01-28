@@ -18,8 +18,11 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_DO:
+        // let newList = [state.todos];
+        // newList.push(action.payload);
         return {
-            ...state, todos: action.payload
+            ...state, 
+            todos: [...state.todos, action.payload]
         }
         default:
         return state;

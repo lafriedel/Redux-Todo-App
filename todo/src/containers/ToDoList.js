@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { toggleCompleted } from "../actions";
+import { toggleCompleted, deleteToDo } from "../actions";
 
 import ToDo from "../components/ToDo";
 
@@ -10,12 +10,12 @@ const ToDoList = props => {
         e.preventDefault();
         props.toggleCompleted(id)
     }
-  console.log(props.todos);
+
   return (
     <div>
       {props.todos.map(todo => (
         <div key={todo.id} onClick={e => handleToggle(e, todo.id)}>
-          <ToDo todo={todo} />
+          <ToDo todo={todo} deleteToDo={props.deleteToDo} />
         </div>
       ))}
     </div>
@@ -30,5 +30,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { toggleCompleted }
+  { toggleCompleted, deleteToDo }
 )(ToDoList);

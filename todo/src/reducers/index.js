@@ -1,4 +1,4 @@
-import { ADD_TO_DO, TOGGLE_COMPLETED } from '../actions';
+import { ADD_TO_DO, TOGGLE_COMPLETED, DELETE_TO_DO } from '../actions';
 
 const initialState = {
     todos: [
@@ -33,6 +33,11 @@ export default (state = initialState, action) => {
                 ? {...todo, completed: !todo.completed} 
                 : todo
             )
+        };
+        case DELETE_TO_DO:
+        return {
+            ...state,
+            todos: state.todos.filter(todo => todo.id !== action.payload)
         }
         default:
         return state;

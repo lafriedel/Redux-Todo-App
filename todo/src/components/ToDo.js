@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
 
 const ToDo = props => {
-    return (
-        <div>
-            <p>{props.todo.task}</p>
-        </div>
-    )
-}
+    
+  const handleDelete = (e, id) => {
+    e.preventDefault();
+    e.stopPropagation();
+    props.deleteToDo(id);
+  };
+
+  return (
+    <div>
+      <p>{props.todo.task}</p>
+      <button onClick={e => handleDelete(e, props.todo.id)}>Delete</button>
+    </div>
+  );
+};
 
 export default ToDo;

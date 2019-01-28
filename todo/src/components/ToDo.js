@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from 'reactstrap';
 
 const ToDo = props => {
     
@@ -9,9 +10,9 @@ const ToDo = props => {
   };
 
   return (
-    <div>
-      <p>{props.todo.task}</p>
-      <button onClick={e => handleDelete(e, props.todo.id)}>Delete</button>
+    <div className={`to-do ${props.todo.completed}`}>
+      <h2>{props.todo.task}</h2>
+      <Button color="danger" onClick={e => handleDelete(e, props.todo.id)}>Delete</Button>
     </div>
   );
 };

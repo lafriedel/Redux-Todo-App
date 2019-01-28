@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addToDo } from "../actions";
+import { Form, Button, Input, FormGroup } from 'reactstrap';
 
 class ToDoForm extends Component {
   state = {
@@ -23,16 +24,16 @@ class ToDoForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
+      <Form inline onSubmit={this.handleSubmit}>
+        <Input
           onChange={this.handleFormChange}
           placeholder="Add a task"
           name="inputText"
           value={this.state.inputText}
           type="text"
         />
-        <button>Add task</button>
-      </form>
+        <Button>Add task</Button>
+      </Form>
     );
   }
 }

@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { toggleCompleted, deleteToDo } from "../actions";
 
 import ToDo from "../components/ToDo";
+import '../components/ToDo.css';
 
 const ToDoList = props => {
-
-    const handleToggle = (e, id) => {
-        e.preventDefault();
-        props.toggleCompleted(id)
-    }
+  const handleToggle = (e, id) => {
+    e.preventDefault();
+    props.toggleCompleted(id);
+  };
 
   return (
     <div>

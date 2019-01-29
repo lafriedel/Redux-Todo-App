@@ -1,3 +1,7 @@
+body {
+  color: #495057;
+}
+
 .container {
   margin: 20px auto;
 }
@@ -5,3 +9,24 @@
 .row {
   margin-bottom: 15px;
 }
+
+.col h1 {
+  text-align: center;
+  /* border-bottom: 3px solid #495057; */
+  padding-bottom: 15px;
+}
+
+input[type=text] {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.todo-form-container {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.add-task {
+  float: right;
+}
+

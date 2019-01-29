@@ -10,15 +10,15 @@ class App extends Component {
       <div className="app-container">
             <Container>
         <Row>
-          <Col />
+         
           <Col>
-            <h1>Today's To-Dos</h1>
+            <h1>My To-Dos</h1>
           </Col>
-          <Col />
+          
         </Row>
         <Row>
           <Col />
-          <Col sm="10">
+          <Col sm="10" className="todo-form-container">
             <ToDoForm />
           </Col>
           <Col />

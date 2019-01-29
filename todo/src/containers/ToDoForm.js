@@ -32,7 +32,7 @@ class ToDoForm extends Component {
           value={this.state.inputText}
           type="text"
         />
-        <Button>Add task</Button>
+        <Button className="add-task">Add task</Button>
       </Form>
     );
   }

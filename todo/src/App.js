@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import ToDoForm from "./containers/ToDoForm";
 import ToDoList from "./containers/ToDoList";
 import { Container, Row, Col } from "reactstrap";
+import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <Container>
+      <div className="app-container">
+            <Container>
         <Row>
           <Col />
           <Col>
@@ -16,18 +18,21 @@ class App extends Component {
         </Row>
         <Row>
           <Col />
-          <Col>
+          <Col sm="10">
             <ToDoForm />
           </Col>
           <Col />
         </Row>
         <Row>
-          <Col>
+          <Col />
+          <Col sm="10">
             <ToDoList />
           </Col>
           <Col />
         </Row>
       </Container>
+      </div>
+
     );
   }
 }

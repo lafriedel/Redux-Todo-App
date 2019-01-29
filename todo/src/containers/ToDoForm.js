@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addToDo } from "../actions";
-import { Form, Button, Input, FormGroup } from 'reactstrap';
+import { Form, Button, Input } from 'reactstrap';
 
 class ToDoForm extends Component {
   state = {
@@ -24,7 +24,7 @@ class ToDoForm extends Component {
 
   render() {
     return (
-      <Form inline onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Input
           onChange={this.handleFormChange}
           placeholder="Add a task"

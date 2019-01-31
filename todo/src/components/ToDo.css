@@ -1,0 +1,8 @@
+.to-do {
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.to-do.true {
+    text-decoration: line-through;
+}
